@@ -1,0 +1,421 @@
+/* ── Base ─────────────────────────────────────────────────────────────────── */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    text-align: left;
+}
+
+h1 { 
+    text-align: center; 
+    color: black;
+}
+
+.container {
+    width: 55%;
+    margin: 50px auto;
+    background: rgb(252, 252, 253);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+/* ── Form (index.php) ─────────────────────────────────────────────────────── */
+.form-box {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form-box label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.form-box button { display: inline-block; }
+
+input {
+    padding: 10px;
+    width: 70%;
+}
+
+/* ── Buttons ──────────────────────────────────────────────────────────────── */
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #0252a7;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+button:hover, .start-btn:hover { background-color: #0056b3; }
+
+.continue-btn {
+    background-color: #0d531d;
+    font-weight: bold;
+}
+.continue-btn:hover { background-color: #1e7e34; }
+
+/* ── Feedback ─────────────────────────────────────────────────────────────── */
+.feedback {
+    color: #155724;
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+/* ── Countdown Timer — fully inline-styled in simulation.php ─────────────── */
+.timer-fill {
+    transition: stroke-dashoffset 0.95s linear, stroke 0.3s;
+}
+
+/* ── Overview page ────────────────────────────────────────────────────────── */
+.overview-box {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 24px 28px;
+    margin-top: 20px;
+}
+
+.overview-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.overview-text {
+    width: 60%;
+}
+
+.overview-image-col {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.overview-image {
+    width: 380px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.overview-box h2 { margin-top: 0; }
+.overview-box h3 { margin-top: 20px; color: #343a40; }
+
+.overview-rules {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+.overview-start {
+    text-align: center;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .overview-content {
+        flex-direction: column;
+    }
+
+    .overview-text,
+    .overview-image-col {
+        width: 100%;
+    }
+
+    .overview-image-col {
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+/* ── Fail page ────────────────────────────────────────────────────────────── */
+.fail-container { border-top: 5px solid #dc3545; }
+
+.fail-title {
+    color: #dc3545;
+    text-align: center;
+}
+
+.fail-name {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.fail-box {
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+}
+
+.fail-box h2 { margin-top: 0; color: #343a40; }
+.fail-box p  { color: #343a40; margin: 0; }
+
+.fail-tip {
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-radius: 8px;
+    padding: 16px 24px;
+}
+
+.fail-tip h2 { margin-top: 0; color: #343a40; }
+.fail-tip p  { color: #343a40; margin: 0; }
+
+/* ── Result Page ──────────────────────────────────────────────────────────── */
+.debrief-dashboard {
+    margin-top: 25px;
+}
+
+.debrief-card {
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    border-left: 6px solid #007BFF;
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.debrief-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.debrief-card-header h3 {
+    margin: 0;
+}
+
+.status-tag {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.tag-best {
+    background: #d4edda;
+    color: #155724;
+}
+
+.tag-good {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.tag-unsafe {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* ── Admin Page ──────────────────────────────────────────────────────────── */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    table-layout: fixed;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    vertical-align: top;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+/* Difficulty heatmap badges */
+.difficulty-badge {
+    display: inline-block;
+    min-width: 72px;
+    text-align: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.heatmap-easy {
+    background: #d4edda;
+    color: #155724;
+}
+
+.heatmap-medium {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.heatmap-hard {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.heatmap-na {
+    background: #e2e3e5;
+    color: #383d41;
+}
+
+/* ── Step analytics dashboard ───────────────────────────────────────────── */
+.analytics-dashboard {
+    margin-top: 20px;
+}
+
+.step-card {
+    background: #ffffff;
+    border: 1px solid #d9dee3;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.step-card-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 18px;
+    cursor: pointer;
+    list-style: none;
+    background: #f8f9fa;
+}
+
+.step-card-summary::-webkit-details-marker {
+    display: none;
+}
+
+.step-summary-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.step-number-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #0252a7;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.step-summary-metrics {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.metric-pill {
+    min-width: 90px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    text-align: center;
+}
+
+.metric-label {
+    display: block;
+    font-size: 0.75rem;
+    color: #6c757d;
+    margin-bottom: 2px;
+}
+
+.metric-value {
+    display: block;
+    font-weight: bold;
+    color: #212529;
+}
+
+.step-card-body {
+    padding: 18px;
+    border-top: 1px solid #e9ecef;
+    background: #ffffff;
+}
+
+.scenario-block {
+    margin-bottom: 18px;
+}
+
+.scenario-label,
+.detail-label {
+    display: inline-block;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 6px;
+}
+
+.scenario-block p {
+    margin: 0;
+    line-height: 1.5;
+    color: #212529;
+}
+
+.step-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.detail-box {
+    background: #f8f9fa;
+    border: 1px solid #e2e6ea;
+    border-radius: 8px;
+    padding: 12px 14px;
+}
+
+.detail-value {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #212529;
+}
+
+@media (max-width: 900px) {
+    .step-card-summary {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .step-summary-metrics {
+        justify-content: flex-start;
+    }
+
+    .step-detail-grid {
+        grid-template-columns: 1fr;
+    }
+}
