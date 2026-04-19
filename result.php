@@ -53,10 +53,10 @@ $responses = $conn->query("
 
     <p><strong>Name:</strong> <?php echo htmlspecialchars($data['name']); ?></p>
     <p><strong>Email:</strong> <?php echo htmlspecialchars($data['email']); ?></p>
+    <p><strong>Performance:</strong> <?php echo $level; ?></p>
     <p><strong>Score:</strong> <?php echo $score; ?></p>
     <canvas id="scoreChart" width="400" height="200"></canvas>
-    <p><strong>Performance:</strong> <?php echo $level; ?></p>
-
+    
     <h2>Debrief Dashboard</h2>
 
     <div class="debrief-dashboard">
