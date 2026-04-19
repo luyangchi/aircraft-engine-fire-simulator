@@ -17,7 +17,7 @@ if ($reason === 'timeout') {
     $message  = "You didn't respond within 10 seconds. In a real emergency, hesitation can be fatal — speed and accuracy both matter.";
 } else {
     $headline = "❌ Incorrect Action";
-    $message  = "You selected an incorrect procedure. In a live aircraft emergency, an incorrect action could have catastrophic consequences.";
+    $message  = $_SESSION['fail_feedback'] ?? "You selected an incorrect procedure.";
 }
 ?>
 <!DOCTYPE html>
