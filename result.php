@@ -91,7 +91,7 @@ $responses = $conn->query("
 
 <script>
 const score = <?php echo $score; ?>;
-const maxScore = 60;
+const maxScore = 80;
 
 const ctx = document.getElementById('scoreChart').getContext('2d');
 
