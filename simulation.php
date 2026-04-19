@@ -76,9 +76,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['choice_id'])) {
 
     // Wrong answer → fail immediately
     if ((int)$choice['score'] < 0) {
-        $_SESSION['fail_reason'] = "wrong";
-        header("Location: fail.php");
-        exit();
+    $_SESSION['fail_reason'] = "wrong";
+    $_SESSION['fail_feedback'] = $choice['feedback'];
+    header("Location: fail.php");
+    exit();
     }
 
     // Correct answer → update score and show feedback
